@@ -1,0 +1,35 @@
+# ---- Data: not published (results and caches stay local) ----
+data/
+results/
+code/data/
+code/results/
+
+# ---- Unpublished manuscript: not part of this repository ----
+main.tex
+main.pdf
+build.sh
+IEEEtaes.cls
+IEEEtaes.bst
+figures/
+CITATION.cff
+docs/
+*.tex
+*.pdf
+
+# ---- LaTeX build artefacts ----
+*.aux
+*.log
+*.out
+*.toc
+*.blg
+*.bbl
+*.synctex.gz
+
+# ---- Python ----
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# ---- OS ----
+.DS_Store
+Thumbs.db

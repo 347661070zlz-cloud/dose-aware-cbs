@@ -1,0 +1,14 @@
+# Normalise line endings so the shell script and Python run on any platform
+* text=auto
+*.sh   text eol=lf
+*.py   text eol=lf
+*.tex  text eol=lf
+*.md   text eol=lf
+*.csv  text eol=lf
+*.txt  text eol=lf
+*.cls  text eol=lf
+*.bst  text eol=lf
+
+# Binaries
+*.pdf  binary
+*.png  binary
