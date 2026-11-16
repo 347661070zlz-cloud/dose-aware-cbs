@@ -16,6 +16,11 @@ docs/
 *.tex
 *.pdf
 
+# ---- Internal notes not for publication ----
+POLISH_RULES.md
+论文_中文稿.md
+评审报告_最新版.md
+
 # ---- LaTeX build artefacts ----
 *.aux
 *.log
