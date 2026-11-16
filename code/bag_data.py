@@ -76,9 +76,12 @@ GRID = dict(nx=20, ny=20, nz=6, cell_xy=5.0, cell_z=2.5)
 
 
 def download_raw():
-    """从 3D BAG 官方 WFS 取 150m×150m 子区（含 100m 目标区边界外的建筑）。"""
+    """从 3D BAG 官方 WFS 取目标窗口外扩 50 m 的子区（含边界外建筑，避免边缘截断）。"""
     os.makedirs(DATA, exist_ok=True)
-    bbox = (84300, 446800, 84450, 446950)
+    # 必须由 BBOX_RD 推导：窗口曾整体北移 100 m，硬编码的旧坐标会漏掉北侧 50 m。
+    pad = 50.0
+    bbox = (BBOX_RD[0] - pad, BBOX_RD[1] - pad,
+            BBOX_RD[2] + pad, BBOX_RD[3] + pad)
     url = (f"{WFS}?service=WFS&version=2.0.0&request=GetFeature"
            f"&typeNames={LAYER}&outputFormat=application/json&count=1000"
            f"&bbox={','.join(map(str, bbox))},urn:ogc:def:crs:EPSG::28992")

@@ -152,6 +152,19 @@ relevant.
 
 ---
 
+## Reproducibility
+
+Rerunning a command reproduces the same plans and doses: the search is deterministic given the
+scene and the seeds, and only the `planning_time` column varies with machine speed. Whole-file
+diffs will show those timing columns as differences; compare the solution columns if you want to
+check agreement.
+
+The one thing that does change results is the **building geometry**. `bag_data.py --download`
+rebuilds the voxel cache from the 3D BAG WFS, so a newer dataset release — or a query window that
+does not match `BBOX_RD` — yields a different scene, and therefore different doses. The window is
+pinned in `bag_data.py`; if you need the exact scene used for the reported numbers, pin
+`data/bag/bag_voxels.json` alongside the code.
+
 ## Notes on interpretation
 
 * **Zero violations is structural.** The low level prunes labels that exceed the budget, so the
