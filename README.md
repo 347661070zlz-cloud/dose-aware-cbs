@@ -1,5 +1,8 @@
 # Dose-aware resource-constrained CBS for multi-UAV path planning
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24268893.svg)](https://doi.org/10.5281/zenodo.24268893)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 Research code for a manuscript in preparation.
 
 **This repository contains code only.** Neither the manuscript (text, figures, PDF) nor the result
@@ -183,6 +186,28 @@ pinned in `bag_data.py`; if you need the exact scene used for the reported numbe
 Building geometry from **3D BAG** (TU Delft), © 3DBAG by the 3D Geoinformation group,
 licensed CC BY 4.0 — <https://3dbag.nl/>. Only the derived voxel cache is built locally by
 `bag_data.py`; no third-party data is redistributed here.
+
+## Citation
+
+If you use this code, please cite the archived release. The DOI below is the *concept* DOI: it
+always resolves to the latest version.
+
+```bibtex
+@software{zheng2026doseaware,
+  author    = {Zheng, Lianzhong and Li, Jingyu and Pan, Juan},
+  title     = {Dose-aware resource-constrained CBS for multi-UAV path planning},
+  year      = {2026},
+  publisher = {Zenodo},
+  version   = {v1.0.0},
+  doi       = {10.5281/zenodo.24268893},
+  url       = {https://doi.org/10.5281/zenodo.24268893}
+}
+```
+
+## License
+
+Released under the **MIT License** — see [LICENSE](LICENSE). The 3D BAG building data it builds on
+is distributed separately by TU Delft under CC BY 4.0.
 
 ## Contact
 
